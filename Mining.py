@@ -1,5 +1,6 @@
 import sys
 toolid = 0x0F39 #set digging tool graphic id defaulted as shovel
+maxweight = 400
 
 target = Target.PromptGroundTarget('Select location to mine') #open a target for player to target tile to mine.
 Journal.Clear() #Make sure journal is not reading ahead of when this started.
@@ -14,8 +15,10 @@ while Journal.Search("There is no metal here to mine.") == False: #do under unti
             Target.TargetExecute(target.X, target.Y, tiles[0].StaticZ, tiles[0].StaticID) #target tile
             Misc.Pause(650)#pause
             if Journal.Search("That is too far away.") == True: #if string is read in journal
-                Journal.Clear() #clear message as to not get confused.
                 Player.ChatSay(67, "Too Far Away") #player says this aloud
+                sys.exit(99) #turns script off
+            if Player.Weight >= maxweight: 
+                Player.ChatSay(67, "Overweight!") #player says this aloud
                 sys.exit(99) #turns script off
             Misc.Pause(750) #pause
         else: #if tile does not exist
