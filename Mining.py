@@ -14,6 +14,9 @@ while Journal.Search("There is no metal here to mine.") == False: #do under unti
         if len(tiles) != 0 and tiles[0].StaticID != 0: #if tile is not id 0
             Target.TargetExecute(target.X, target.Y, tiles[0].StaticZ, tiles[0].StaticID) #target tile
             Misc.Pause(650)#pause
+            if Journal.Search("cannot be seen") == True: #if string is read in journal
+                Player.ChatSay(67, "Cannot be seen") #player says this aloud
+                sys.exit(99) #turns script off
             if Journal.Search("That is too far away.") == True: #if string is read in journal
                 Player.ChatSay(67, "Too Far Away") #player says this aloud
                 sys.exit(99) #turns script off
@@ -22,8 +25,18 @@ while Journal.Search("There is no metal here to mine.") == False: #do under unti
                 sys.exit(99) #turns script off
             Misc.Pause(750) #pause
         else: #if tile does not exist
-            Target.Cancel() #cancel target
-            sys.exit(99) #turns script off
+            Target.TargetExecute(target.X, target.Y, target.Z)#player says this aloud
+            Misc.Pause(650)#pause
+            if Journal.Search("cannot be seen") == True: #if string is read in journal
+                Player.ChatSay(67, "Cannot be seen") #player says this aloud
+                sys.exit(99) #turns script off
+            if Journal.Search("That is too far away.") == True: #if string is read in journal
+                Player.ChatSay(67, "Too Far Away") #player says this aloud
+                sys.exit(99) #turns script off
+            if Player.Weight >= maxweight: #if players weight hits max weight indicated above.
+                Player.ChatSay(67, "Overweight!") #player says this aloud
+                sys.exit(99) #turns script off
+            Misc.Pause(750) #pause
     else: #if shovel does not exist
         Player.ChatSay(67, "No Shovel") #player says this aloud
         sys.exit(99) #turns script off
