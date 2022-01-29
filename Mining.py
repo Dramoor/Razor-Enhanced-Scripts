@@ -25,7 +25,7 @@ while Journal.Search("There is no metal here to mine.") == False: #do under unti
                 sys.exit(99) #turns script off
             Misc.Pause(750) #pause
         else: #if tile does not exist
-            Target.TargetExecute(target.X, target.Y, target.Z)#player says this aloud
+            Target.TargetExecute(target.X, target.Y, target.Z)#target exact targeted spot.
             Misc.Pause(650)#pause
             if Journal.Search("cannot be seen") == True: #if string is read in journal
                 Player.ChatSay(67, "Cannot be seen") #player says this aloud
