@@ -1,0 +1,221 @@
+SPELL GRID GUMP ID REFERENCE GUIDE
+
+
+Here is a list of all Spells Gump IDs standard to the OSI Client.
+
+Magery
+
+Circle 1
+Clumsy 2240
+Create Food 2241
+Feeblemind 2242
+Heal 2243	
+Magic Arrow 2244	
+Night Sight 2245
+Reactive Armor 2246
+Weaken 2247
+
+Circle 2
+Agility 2248
+Cunning 2249
+Cure 2250
+Harm 2251	
+Magic Trap 2252
+Magic Untrap 2253
+Protection 2254
+Strength 2255
+
+Circle 3
+Bless 2256
+Fireball 2257	 
+Magic Lock 2258
+Poison 2259
+Telekinesis 2260
+Teleport 2261	
+Unlock 2262
+Wall of Stone 2263	
+
+Circle 4
+Arch Cure 2264	
+Arch Protection 2265
+Curse 2266
+Fire Field 2267
+Greater Heal 2268
+Lightning 2269
+Mana Drain 2270
+Recall 2271	
+
+
+Circle 5
+Blade Spirits 2272	
+Dispel Field 2273
+Incognito 2274	
+Magic Reflection 2275 
+Mind BLast 2276
+Paralyze 2277
+Poison Field 2278
+Summon Creature 2279
+
+Circle 6
+Dispel 2280
+Energy Bolt 2281
+Explosion 2282
+Invisibility 2283
+Mark 2284	
+Mass Curse 2285
+Paralyze Field 2286
+Reveal 2287
+
+Circle 7
+Chain Lightning 2288
+Energy Field 2289
+Flamestrike 2290
+Gate Travel 2291	
+Mana Vampire 2292	
+Mass Dispel 2293
+Meteor Swarm 2294
+Polymorph 2295
+
+Circle 8
+Earthquake 2296
+Energy Vortex 2297
+Resurrection 2298
+Air Elemental 2299
+Summon Daemon 2300
+Earth Elemental 2301
+Fire Elemental 2302
+Water Elemental 2303
+
+
+Chivalry
+
+Cleanse By Fire 20736 
+Close Wounds 20737
+Consecrate Weapon 20738
+Dispel Evil 20739
+Divine Fury 20740
+Enemy of One 20741
+Holy Light 20742
+Noble Sacrifice 20743
+Remove Curse 20744
+Sacred Journey 20745
+
+Necromancy
+
+Animate Dead 20480
+Blood Oath 20481
+Corpse Skin 20482
+Curse Weapon 20483
+Evil Omen 20484
+Horrific Beast 20485
+Lich Form 20486
+Mind Rot 20487
+Pain Spike 20488
+Poison Strike 20489
+Strangle 20490
+Summon Familiar 20491
+Vampiric Embrace 20492
+Vengeful Spirit 20493
+Wither 20494
+Wraith Form 20495
+Exorcism 20496
+
+Ninjitsu
+
+Focus Attack 21280
+Drain Strike 21281
+Animal Form 21282
+Ki Attack 21283
+Surprise Attack 21284
+Backlash 21285
+Shadowjump 21286
+Mirror Image 21287
+
+Bushido
+
+Honorable Execution 21536
+Confidence 21537
+Evasion 21538
+Counter Attack 21539
+Lightning Strike 21540
+Momentum Strike  21541
+
+Spellweaving
+
+Arcane Circle 23000
+Gift of Renewal 23001
+Immolating Weapon 23002
+Attune Weapon 23003
+Thunderstorm 23004
+Nature's Fury 23005
+Summon Fey 23006
+Summon Fiend 23007
+
+Reaper Form 23008
+Wildfire 23009
+Essence of Wind 23010
+Dryad Allure 23011
+Ethereal Voyage  23012
+Word of Death  23013
+Gift of Life  23014
+Arcane Empowerment  23015
+
+Mysticism
+
+Nether Bolt 24000
+Healing Stone 24001
+Purge Magic  24002
+Enchant  24003
+Sleep  24004
+Eagle Strike  24005
+Animated Weapon  24006
+Stone Form  24007
+Spell Trigger  24008
+Mass Sleep  24009
+Cleansing Winds  24010
+Bombard  24011
+Spell Plague 24012
+Hailstorm  24013
+Nether Cyclone  24014
+Rising Colossus  24015
+
+
+CUSTOM EVENTINE GUMPIDS
+
+Cleric
+
+Angelic Faith 23020
+Banish Evil 23021 
+Dampen Spirit 23022
+Divine Focus 23023
+Hammer of Faith 23024
+Purge 23025
+Restoration 23026
+Sacred Boon 23027
+Sacrifice 23028
+Smite 23029
+Touch Of Life 23030
+Trial By Fire 23031
+
+DRUID
+
+Shield of Earth 23046
+Hollow Reed 23039
+Pack of Beasts 23044
+Spring of Life 23047
+Grasping Roots 23037
+Circle of Thorns 23033
+Swarm of Insects 23049
+Volcanic Eruption 23051
+Treefellow 23050
+Deadly Spores 23034
+Enchanted Grove 23035
+Lure Stone 23041
+Hurricane 23040
+Mushroom Gateway 23043
+Restorative Soil 23045
+Firefly 23048
+Forest Kin 23036
+Bark Skin 23032
+Mana Spring 23042
+Hibernate 23038
