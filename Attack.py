@@ -9,36 +9,36 @@ stamcheck = 250 # how much stam to cast divine fury if under for healing/swing s
 castconsecrate = True #True does Consecrate Weapon False does not.
 castdivine = True  #True does Divine Fury False does not.
 
-def consecrateweapon():
-    if not Player.BuffsExist('Consecrate Weapon'):
-        Spells.CastChivalry('Consecrate Weapon')
-        Misc.Pause(350)
+def consecrateweapon(): #cast Consecrate Weapon method
+    if not Player.BuffsExist('Consecrate Weapon'): #if consecrate is not in buff bar
+        Spells.CastChivalry('Consecrate Weapon') # cast consecrate weapon.
+        Misc.Pause(350) # pause
         
-def divinefury():
-    if not Player.BuffsExist('Divine Fury'):
-        Spells.CastChivalry('Divine Fury')
-        Misc.Pause(150)
+def divinefury(): # cast divine fury method
+    if not Player.BuffsExist('Divine Fury'): #if divine fury is not in buff bar
+        Spells.CastChivalry('Divine Fury') # cast divine fury
+        Misc.Pause(150) # pause
 
-def PrimaryOrSecondary():
-    weapon = Player.GetItemOnLayer('LeftHand')
-    weapon2 = Player.GetItemOnLayer('RightHand')
-    if weapon != None and weapon.ItemID not in shields:
-        if weapon.ItemID in primaryweaponid:
-            if not Player.HasPrimarySpecial:
-                Player.WeaponPrimarySA()
-        elif weapon.ItemID in secondaryweaponid:
-            if not Player.HasSecondarySpecial:
-                Player.WeaponSecondarySA()
-    elif weapon2 != None and weapon2.ItemID not in shields:
-        if weapon2.ItemID in primaryweaponid:
-            if not Player.HasPrimarySpecial:
-                Player.WeaponPrimarySA()
-        elif weapon2.ItemID in secondaryweaponid:
-            if not Player.HasSecondarySpecial :
-                Player.WeaponSecondarySA()
+def PrimaryOrSecondary(): # use primary or secondary method
+    weapon = Player.GetItemOnLayer('LeftHand') # set weapon in left hand
+    weapon2 = Player.GetItemOnLayer('RightHand') # set weapon in right hand
+    if weapon != None and weapon.ItemID not in shields: # if item present in left hand and not a shield.
+        if weapon.ItemID in primaryweaponid: # if weapon itemid is in primary ids
+            if not Player.HasPrimarySpecial: # if primary is not on
+                Player.WeaponPrimarySA() #use primary
+        elif weapon.ItemID in secondaryweaponid: # if weapon itemid is in secondary ids
+            if not Player.HasSecondarySpecial: # if secondary is not on
+                Player.WeaponSecondarySA() #use secondary
+    elif weapon2 != None and weapon2.ItemID not in shields: # if item present in right hand and not a shield.
+        if weapon2.ItemID in primaryweaponid: # if weapon itemid is in primary ids
+            if not Player.HasPrimarySpecial: # if primary is not on
+                Player.WeaponPrimarySA() #use primary
+        elif weapon2.ItemID in secondaryweaponid: # if weapon itemid is in secondary ids
+            if not Player.HasSecondarySpecial: # if secondary is not on
+                Player.WeaponSecondarySA() #use secondary
     else:
-        if not Player.HasPrimarySpecial:
-            Player.WeaponPrimarySA()
+        if not Player.HasPrimarySpecial: # if primary is not on
+            Player.WeaponPrimarySA() #use primary
     return
     
 def searchArea(): #search filter function
@@ -52,17 +52,17 @@ def searchArea(): #search filter function
 def goattackenemy(enemy): #attack function
     monster = Mobiles.FindBySerial(enemy.Serial) #set mobile to variable
     if monster: #does monster exist?
-        if castconsecrate:
-            consecrateweapon()
-        if castdivine:
-            divinefury()
+        if castconsecrate: # If castconsecrate setting is set to True at top.
+            consecrateweapon() # call cast consecrate weapon function
+        if castdivine: # If castdivine setting is set to True at top.
+            divinefury() # call cast divine fury function
         PrimaryOrSecondary() #turn on special
         Misc.Pause(50) # pause
         Player.Attack(enemy) #attack target
         Misc.Pause(150) # pause
-        if Player.Stam < stamcheck and castdivine:
-            Spells.CastChivalry('Divine Fury')
-            Misc.Pause(150)
+        if Player.Stam < stamcheck and castdivine: # if stam is under set stam check up top and castdivine setting is set to True at top. 
+            Spells.CastChivalry('Divine Fury') #Cast Divine Fury
+            Misc.Pause(150) # pause
         if monster and Player.InRangeMobile(monster,keeprange): #if monster still exists and in range do not move on to a new monster
             goattackenemy(monster)# call to attack function
 
