@@ -2,7 +2,7 @@ from System.Collections.Generic import List
 from System import Byte
 scanrange = 5 #Range to attack initially
 keeprange = 2 #range to keep attacking same mobile
-primaryweaponid = [0x143E,0x26C2,0x14F0] #weapon ids to do primary with. add yours in if not in there.
+primaryweaponid = [0x143E,0x26C2,0x14F0, 0x0F4B] #weapon ids to do primary with. add yours in if not in there.
 secondaryweaponid = [0x2D28,0x0F52, 0x27A5] #weapon ids to do secondary with. add yours in if not in there.
 shields = [0x0A22, 0x0A25, 0x2B01] #shield ids to ignore. add yours in if not in there.
 stamcheck = 250 # how much stam to cast divine fury if under for healing/swing speed. this may vary player to player.
