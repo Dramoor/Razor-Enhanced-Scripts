@@ -76,5 +76,5 @@ def main():  #main function
             Misc.Pause(350)#pause
         Misc.Pause(350) #pause
   
-while True: #while program is running. You need to turn script off using this function if u get disconnected before trying to log back in.
+while Player.Connected: #while program is running. You need to turn script off using this function if u get disconnected before trying to log back in.
   main()  #call main function
